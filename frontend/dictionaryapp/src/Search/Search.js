@@ -1,13 +1,13 @@
 import React from 'react';
 
 function SearchComponent(){
-    const sayHello = (name) => {
-        alert("Hello!"+name);
-      };
+    const inputTextChange = (e) => {
+        console.log(e.target.value);
+    }
     return(
         <div className="searchBox">
-            <input type="text"></input>
-            <button onClick={sayHello("df")}>Search</button>
+            <input onChange={inputTextChange} type="text"></input>
+            <button>Search</button>
         </div>
     );
 }
